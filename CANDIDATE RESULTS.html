@@ -1,0 +1,986 @@
+﻿
+<head>
+ <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<style type="text/css">
+.auto-style2 {
+	color: #00FF00;
+	text-align: center;
+	font-family: "Bodoni MT Black";
+	background-color: #137D7D;
+}
+.auto-style3 {
+	text-align: center;
+}
+.auto-style7 {
+	text-align: center;
+	font-weight: normal;
+}
+.auto-style6 {
+	color: #000080;
+}
+.auto-style24 {
+	margin-left: 0px;
+}
+/* Fade In/Out Transition */
+.fade {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade.show {
+  opacity: 1;
+}
+
+/* Scale (Zoom In/Out) Transition */
+.scale {
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.scale.show {
+  transform: scale(1);
+}
+
+/* Slide Up/Down Transition */
+.slide-up {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.slide-up.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-down {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.slide-down.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Color Change Transition */
+.color-change {
+  background-color: #3498db;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.color-change:hover {
+  background-color: #e74c3c;
+}
+
+/* Rotate Transition */
+.rotate {
+  transform: rotate(0deg);
+  transition: transform 1s ease-in-out;
+}
+
+.rotate:hover {
+  transform: rotate(360deg);
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in;
+}
+
+/* Slide In From Left Animation */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 1s ease-out;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Color Fade Animation */
+@keyframes colorFade {
+  0% {
+    background-color: #3498db;
+  }
+  50% {
+    background-color: #e74c3c;
+  }
+  100% {
+    background-color: #3498db;
+  }
+}
+
+.color-fade {
+  animation: colorFade 5s infinite;
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: rotate 2s infinite linear;
+}
+
+/* Hover Effects Combined with Transition */
+.hover-effect {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-effect:hover {
+  background-color: #e74c3c;
+  transform: scale(1.1);
+}
+
+@keyframes hover-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hover-effect:hover {
+  animation: hover-pulse 1s infinite;
+}
+
+/* Multiple Transitions Together */
+.multi-transition {
+  width: 200px;
+  height: 200px;
+  background-color: #3498db;
+  transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease;
+}
+
+.multi-transition:hover {
+  width: 250px;
+  height: 250px;
+  background-color: #e74c3c;
+}
+
+/* Fade In/Out Transition */
+.fade {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade.show {
+  opacity: 1;
+}
+
+/* Scale (Zoom In/Out) Transition */
+.scale {
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.scale.show {
+  transform: scale(1);
+}
+
+/* Slide Up/Down Transition */
+.slide-up {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.slide-up.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-down {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.slide-down.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Color Change Transition */
+.color-change {
+  background-color: #3498db;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.color-change:hover {
+  background-color: #e74c3c;
+}
+
+/* Rotate Transition */
+.rotate {
+  transform: rotate(0deg);
+  transition: transform 1s ease-in-out;
+}
+
+.rotate:hover {
+  transform: rotate(360deg);
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in;
+}
+
+/* Slide In From Left Animation */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 1s ease-out;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Color Fade Animation */
+@keyframes colorFade {
+  0% {
+    background-color: #3498db;
+  }
+  50% {
+    background-color: #e74c3c;
+  }
+  100% {
+    background-color: #3498db;
+  }
+}
+
+.color-fade {
+  animation: colorFade 5s infinite;
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: rotate 2s infinite linear;
+}
+
+/* Hover Effects Combined with Transition */
+.hover-effect {
+  background-color:#179090;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-effect:hover {
+  background-color:#00FFFF;
+  transform: scale(1.1);
+}
+
+@keyframes hover-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hover-effect:hover {
+  animation: hover-pulse 1s infinite;
+}
+
+/* Multiple Transitions Together */
+.multi-transition {
+  width: 200px;
+  height: 200px;
+  background-color: #3498db;
+  transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease;
+}
+
+.multi-transition:hover {
+  width: 250px;
+  height: 250px;
+  background-color: #e74c3c;
+}
+
+.auto-style24 {
+
+	font-size: large;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;}
+
+ 
+.auto-style19 {
+	border-style: none;
+	border-width: medium;
+	text-align: center;
+}
+/* Styles for Footer */
+#footer p {
+	color: #fff;
+	font-size: medium;
+	margin-top: 2px;
+	margin-bottom: 6px;
+}
+#footer a {
+	color: #fff;
+	text-decoration: underline;
+}
+#footer a:hover {
+	color: #000;
+	text-decoration: none;
+
+ 
+}
+     .container {
+            padding: 0px;
+            border-radius: 0px;
+            text-align: center;
+            width:100%;
+           
+        }
+
+.auto-style30 {
+	text-align: center;
+	font-weight: normal;
+	background-color: #008080;
+}
+
+.auto-style39 {
+	font-size: x-small;
+	border-width: 0px;
+	background-color: #137D7D;
+	margin-top: 0px;
+	color: #FFFFFF;
+}
+
+    
+.auto-style28 {
+	background-color: #7B9292;
+	text-align: center;
+	color: #A2DEDE;
+}
+.auto-style29 {
+	text-decoration: underline;
+}
+     * Styles for Footer */
+#footer p {
+	color: #fff;
+	font-size: medium;
+	margin-top: 2px;
+	margin-bottom: 6px;
+}
+#footer a {
+	color: #fff;
+	text-decoration: underline;
+}
+#footer a:hover {
+	color: #000;
+	text-decoration: none;
+
+ 
+}
+
+    
+</style>
+ <title>Results</title>
+</head>
+
+<body style="margin: 0; background-color: #f0f8ff;
+">
+
+		<table style="width: 100%; height: 112px" class="auto-style30">
+			<tr>
+				<td style="width: 81px">
+				<img alt="" height="73" src="logo.png" width="95" /></td>
+				<td>
+<h1 class="auto-style2">ATLAS HIGH SCHOOL E-LEARNING </h1>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="height: 26px">
+		<table align="center" class="auto-style39" style="width: 100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="auto-style19" style="width: 16%">
+				<a href="HOME%20PAGE.html"><span class="hover-effect" class="auto-style20">HOME 
+				</span></a></td>
+				<td class="auto-style19" style="width: 16%">
+				<a href="PURPOSE.html"><span  class="hover-effect" class="auto-style20">PURPOSE</span></a></td>
+				<td class="auto-style19" style="width: 20%"><a href="STAKE%20HOLDERS.html">
+				<span  class="hover-effect" class="auto-style20">STAKE 
+				HOLDERS</span></a></td>
+				<td class="auto-style19" style="width: 16%">
+				<a href="CANDIDATE%20RESULTS.html">
+				<span  class="hover-effect" class="auto-style20">&nbsp;RESULTS</span></a></td>
+				<td class="auto-style19" style="width: 16%">
+				<a href="E-LEARNING.html"><span class="hover-effect" class="auto-style27">E-LEARNING</span></a></td>
+			</tr>
+		</table></td>
+			</tr>
+		</table>
+
+
+<section id="comp-m716kqlr" class="Oqnisf comp-m716kqlr wixui-section" data-block-level-container="ClassicSection" style="border-style: none; border-color: inherit; border-width: 0px; background: ; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; overflow: visible; position: relative; left: -106px; grid-area: 3 / 1 / 4 / 2; place-self: start; width: 980px; min-width: 980px; --bg-overlay-color: transparent; --bg-gradient: none; top: 14px;" tabindex="-1">
+	<div id="bgLayers_comp-m716kqlr" class="auto-style3" data-hook="bgLayers" data-motion-part="BG_LAYER comp-m716kqlr" style="border-style: none; border-color: inherit; border-width: 0px; background:; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 67px; width: 984px; left: -99px; mask-image: var(--mask-image,none); mask-position: var(--mask-position,0); mask-repeat: var(--mask-repeat,no-repeat); mask-size: var(--mask-size,100%); overflow: hidden; pointer-events: var(--fill-layer-background-media-pointer-events); position: absolute; top: 16px;">
+		<div class="auto-style3">
+			<br class="Apple-interchange-newline" />
+		</div>
+		<div id="bgMedia_comp-m716kqlr" class="VgO9Yg" data-motion-part="BG_MEDIA comp-m716kqlr" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 95px;">
+		</div>
+	</div>
+	<div class="" data-mesh-id="comp-m716kqlrinlineContent" data-testid="inline-content" style="border-style: none; border-color: inherit; border-width: 0px; background: ; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: none; position: relative; height: auto; width: 980px; display: flex; left: -100px; top: 20px;">
+		<div data-mesh-id="comp-m716kqlrinlineContent-gridContainer" data-testid="mesh-container-content" style="background: transparent; border: 0px; margin: 0px 0px -17px; outline: 0px; padding: 0px; vertical-align: baseline; position: static; display: grid; height: auto; width: 980px; min-height: auto; grid-template-rows: 1fr; grid-template-columns: 100%;">
+			<div id="comp-m716lttn" ariaattributes="[object Object]" class="HcOXKn c9GqVL QxJLC3 lq2cno YQcXTT comp-m716lttn wixui-rich-text" data-testid="richTextElement" style="border-style: none; border-color: inherit; border-width: 0px; background: ; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: none; text-size-adjust: 100%; direction: var(--text-direction); min-height: var(--min-height); min-width: var(--min-width); mix-blend-mode: var(--blendMode,normal); overflow-wrap: break-word; text-align: start; text-shadow: var(--textOutline,0 0 transparent),var(--textShadow,0 0 transparent); text-transform: var(--textTransform,&quot;none&quot;); position: relative; left: 540px; grid-area: 1 / 1 / 2 / 2; place-self: start; --backgroundColor: 0,0,0; --alpha-backgroundColor: 0; --blendMode: normal; --textShadow: 0px 0px transparent; --textOutline: 0px 0px transparent; width: 546px; height: 6px; top: 2px;">
+				<h2 class="auto-style7" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 20px; line-height: normal; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_45)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 20px;">
+				<span class="auto-style6" style="border-style: none; border-color: inherit; border-width: 0px; background: ; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-style: normal;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-family: helvetica-w01-roman, sans-serif;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				<span class="wixui-rich-text__text" style="border-style: none; border-color: inherit; border-width: 0px; background: ; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">
+				<strong>U2261 - ATLAS HIGH SCHOOL, GAYAZA-2024 UCE RESULTS</strong></span></span></span></span></span></span></h2>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="comp-m70xzt17" class="Oqnisf comp-m70xzt17 wixui-section focus-within" data-block-level-container="ClassicSection" style="background: transparent; border: 0px; margin: 0px; outline: none; padding: 0px; vertical-align: baseline; pointer-events: auto; overflow: visible; position: relative; left: 0px; grid-area: 4 / 1 / 5 / 2; place-self: start; width: 980px; min-width: 980px; --bg-overlay-color: transparent; --bg-gradient: none;" tabindex="-1">
+	<div id="bgLayers_comp-m70xzt17" class="MW5IWV" data-hook="bgLayers" data-motion-part="BG_LAYER comp-m70xzt17" style="border-style: none; border-color: inherit; border-width: 0px; background: ; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 1598.61px; width: 1028px; left: -48px; mask-image: var(--mask-image,none); mask-position: var(--mask-position,0); mask-repeat: var(--mask-repeat,no-repeat); mask-size: var(--mask-size,100%); overflow: hidden; pointer-events: var(--fill-layer-background-media-pointer-events); position: absolute; top: 0px;">
+		<div class="LWbAav Kv1aVt" data-testid="colorUnderlay" style="border-style: none; border-color: inherit; border-width: 0px; background-image: url('var(--bg-gradient)'); background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: var(--section-corvid-background-color,var(--bg-overlay-color)); margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 1598.61px; position: absolute; top: -260px; width: 980px; left: 10px;">
+		</div>
+		<div id="bgMedia_comp-m70xzt17" class="VgO9Yg" data-motion-part="BG_MEDIA comp-m70xzt17" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 1598.61px;">
+		</div>
+	</div>
+	<div class="auto-style24" data-mesh-id="comp-m70xzt17inlineContent" data-testid="inline-content" style="border-style: none; border-color: inherit; border-width: 0px; background: ; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: none; position: relative; height: auto; width: 980px; left: 97px; top: 12px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">
+		<div data-mesh-id="comp-m70xzt17inlineContent-gridContainer" data-testid="mesh-container-content" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; position: static; display: grid; height: auto; width: 980px; min-height: auto; grid-template-rows: repeat(5, min-content) 1fr; grid-template-columns: 100%;">
+			<div id="comp-m711nibn" ariaattributes="[object Object]" class="HcOXKn c9GqVL QxJLC3 lq2cno YQcXTT comp-m711nibn wixui-rich-text" data-testid="richTextElement" style="background: transparent; border: 0px; margin: 31px 0px 15px calc(50% - 490px); outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: none; text-size-adjust: 100%; direction: var(--text-direction); min-height: var(--min-height); min-width: var(--min-width); mix-blend-mode: var(--blendMode,normal); overflow-wrap: break-word; text-align: start; text-shadow: var(--textOutline,0 0 transparent),var(--textShadow,0 0 transparent); text-transform: var(--textTransform,&quot;none&quot;); position: relative; left: -106px; grid-area: 1 / 1 / 2 / 2; place-self: start; --backgroundColor: 0,0,0; --alpha-backgroundColor: 0; --blendMode: normal; --textShadow: 0px 0px transparent; --textOutline: 0px 0px transparent; width: 1210px; height: auto;">
+				<p class="font_8 wixui-rich-text__text" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px; text-align: center;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-weight: bold;">
+				<span class="wixGuard wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">
+				&#8203;</span></span></span></span></p>
+				<p class="font_8 wixui-rich-text__text" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px; text-align: center;">
+				&nbsp;</p>
+				<p class="font_8 wixui-rich-text__text" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px; text-align: center;">
+				<img class="fade-in" alt="ATLAS CANDIDATES S4 2024" height="183" src="download.png" width="275" /></p>
+				<p class="font_8 wixui-rich-text__text" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px; text-align: center;">
+				&nbsp;</p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				INDEX NO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				RESULT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				SUBJECT ACHIEVEMENTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PROJECT</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/001 TASOBYE WINNIE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-A |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				AGR-B&nbsp;&nbsp;&nbsp; PHY-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CHE-B&nbsp;&nbsp;&nbsp; | BIO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/002 MAYANJA ERICK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				BIO-C&nbsp;&nbsp;&nbsp;&nbsp; CST-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/003 NALWOGA PATIENCE ESTHER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				KIS-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CHE-C&nbsp;&nbsp;&nbsp; |BIO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/005 NAZZIWA SAFINAH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				IRE-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				LUG-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHE-B |&nbsp;&nbsp; 
+				BIO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/006 TUMWEBAZE PRIZE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CHE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BIO-C&nbsp;&nbsp;&nbsp;&nbsp; 
+				CST-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/007 NANTEGE MARIAM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				IRE-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CHE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BIO-C&nbsp;&nbsp;&nbsp;&nbsp; 
+				ENT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/010 MAYANJA MARTIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIS-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp;&nbsp; CHE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				BIO-C&nbsp;&nbsp;&nbsp;&nbsp; CST-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/012 BYAMUKAMA MOSES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				AGR-B&nbsp;&nbsp;&nbsp;&nbsp; PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CHE-B |&nbsp;&nbsp; BIO-C&nbsp;&nbsp;&nbsp;&nbsp; B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/013 NANSAMBA SHEIRA LYDIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIS-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AGR-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHE-C |&nbsp;&nbsp; BIO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/015 AMONY HELLEN RUTH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				LIT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				HIST-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GEO-B |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				BIO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/018 MUTUNGI ELTON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				BIO-C&nbsp;&nbsp;&nbsp;&nbsp; CST-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/020 KAZIBWE PETER GIDEON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp; CHE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				BIO-B I&nbsp;&nbsp;&nbsp;&nbsp; PS-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/023 KASENDWA HASHIB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				IRE-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				AGR-B&nbsp;&nbsp;&nbsp;&nbsp; PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CHE-B |&nbsp;&nbsp;&nbsp; BIO-C&nbsp;&nbsp;&nbsp;&nbsp; B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/025 LUKWAGO MAURICE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LUG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				MAT-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CHE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BIO-C&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/036 NYANZI TENDO ISAAC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				AGR-C&nbsp;&nbsp;&nbsp;&nbsp; PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CHE-C&nbsp;&nbsp;&nbsp;&nbsp; BIO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/041 TWIKIRISE TREVOR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp; LUG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				MAT-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PHY-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CHE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BIO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/044 SSEWAGUDDE ALLAN SIMON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				BIO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CST-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/046 TALEMWA MERCY MAJORIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				BIO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CST-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/091 RUBANGAKENE MORGAN .C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-A&nbsp;&nbsp;&nbsp;&nbsp; CHE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				BIO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IPS-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/060 KIVUMBI JONAH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp;&nbsp; CHE-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				BIO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IPS-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B&nbsp;</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/063 MUHINDO JOHN BISIKA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp;&nbsp; CHE-D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				BIO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CST-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/066 NAGINDA PATIENCE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp;&nbsp; CHE-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				BIO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I PS-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/098 KATYA ALVIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp; MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				BIO-C&nbsp;&nbsp;&nbsp;&nbsp; CST-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B&nbsp;</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/100 KAWEESA ELVIS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				HIS-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GEO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				LUG-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				AGR-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PHY-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CHE-B&nbsp; |&nbsp; BIO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/101 NALUTAAYA JOANITA JOSELINE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				HIS-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				KIS-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHE-B&nbsp;&nbsp;&nbsp;&nbsp; 
+				BIO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CST-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/103 AMAL BRIAN FELIX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIST-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				AGR-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CHE-C&nbsp;&nbsp;&nbsp; BIO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/106 NSINJO ALICE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				LIT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIS-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp;&nbsp; CHE-B&nbsp;&nbsp; | BIO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B&nbsp;</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/107 KINAALWA FRANCIS FIORE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIS-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KIS-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				AGR-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PHY-B&nbsp;&nbsp;&nbsp;&nbsp; 
+				CHE-B&nbsp;&nbsp; | BIO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/110 AGENORWOT DAPHINE HAPPY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				ENG-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LIT-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				HIS-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHE-B&nbsp;&nbsp;&nbsp;&nbsp; 
+				BIO-B&nbsp;&nbsp;&nbsp;&nbsp; ENT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/111 JAMAL KISAKYE SHADIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				ENG-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				HIS-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				AGR-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PHY-B&nbsp;&nbsp;&nbsp;&nbsp; 
+				CHE-B&nbsp;&nbsp; | BIO-C&nbsp;&nbsp;&nbsp;&nbsp; C</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/112 LAJARA ANGELINA HOPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LIT-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				HIS-A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GEO-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				BIO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENT-C&nbsp;&nbsp;&nbsp;&nbsp; 
+				B</span></span></p>
+				<p class="auto-style3" style="background: transparent; border: 0px; outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; font-style: ; font-variant-ligatures: ; font-variant-caps: ; font-variant-numeric: ; font-variant-east-asian: ; font-variant-alternates: ; font-variant-position: ; font-variant-emoji: ; font-weight: ; font-stretch: ; font-size: 16px; line-height: 1.75em; font-family: ; font-optical-sizing: ; font-size-adjust: ; font-kerning: ; font-feature-settings: ; font-variation-settings: ; color: rgb(var(--color_15)); letter-spacing: 0em; margin-block: 0px; margin: 0px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; font-size: 16px;">
+				<span class="wixui-rich-text__text" style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; text-decoration: underline;">
+				U2261/126 LUBAJO BRIAN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENG-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CRE-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HIS-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				GEO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAT-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				AGR-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PHY-B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				CHE-B&nbsp;&nbsp; |&nbsp; BIO-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B</span></span></p>
+			</div>
+			<div id="comp-m712nae6" class="SsY_2i comp-m712nae6" style="background: transparent; border: 0px; margin: 56px 0px 25px calc(50% - 490px); outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; position: relative; left: 238px; grid-area: 1 / 1 / 2 / 2; place-self: start; --lnw: 3px; --brd: 40,38,38; --mrg: 3px; --alpha-brd: 1; width: 3px; height: 917px;">
+				<div class="UGHfip wixui-vertical-line" style="background: transparent; border-image: url('') initial; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 917px; width: 3px; border-right-style: none; border-right-color: inherit; border-right-width: 0px; border-top-style: none; border-top-color: inherit; border-top-width: 0px; border-bottom-style: none; border-bottom-color: inherit; border-bottom-width: 0px;">
+				</div>
+			</div>
+			<div id="comp-m712o7rq" class="SsY_2i comp-m712o7rq" style="background: transparent; border: 0px; margin: 56px 0px 25px calc(50% - 490px); outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; position: relative; left: 321px; grid-area: 1 / 1 / 2 / 2; place-self: start; --lnw: 3px; --brd: 40,38,38; --mrg: 3px; --alpha-brd: 1; width: 3px; height: 917px;">
+				<div class="UGHfip wixui-vertical-line" style="background: transparent; border-image: url('') initial; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 917px; width: 3px; border-right-style: none; border-right-color: inherit; border-right-width: 0px; border-top-style: none; border-top-color: inherit; border-top-width: 0px; border-bottom-style: none; border-bottom-color: inherit; border-bottom-width: 0px;">
+				</div>
+			</div>
+			<div id="comp-m712ovm2" class="SsY_2i comp-m712ovm2" style="background: transparent; border: 0px; margin: 78px 0px 30px calc(50% - 490px); outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; position: relative; left: 409px; grid-area: 1 / 1 / 2 / 2; place-self: start; --lnw: 3px; --brd: 40,38,38; --mrg: 3px; --alpha-brd: 1; width: 3px; height: 890px;">
+				<div class="UGHfip wixui-vertical-line" style="background: transparent; border-image: url('') initial; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 890px; width: 3px; border-right-style: none; border-right-color: inherit; border-right-width: 0px; border-top-style: none; border-top-color: inherit; border-top-width: 0px; border-bottom-style: none; border-bottom-color: inherit; border-bottom-width: 0px;">
+				</div>
+			</div>
+			<div id="comp-m712r6pg" class="SsY_2i comp-m712r6pg" style="background: transparent; border: 0px; margin: 83px 0px 25px calc(50% - 490px); outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; position: relative; left: 488px; grid-area: 1 / 1 / 2 / 2; place-self: start; --lnw: 3px; --brd: 40,38,38; --mrg: 3px; --alpha-brd: 1; width: 3px; height: 890px;">
+				<div class="UGHfip wixui-vertical-line" style="background: transparent; border-image: url('') initial; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 890px; width: 3px; border-right-style: none; border-right-color: inherit; border-right-width: 0px; border-top-style: none; border-top-color: inherit; border-top-width: 0px; border-bottom-style: none; border-bottom-color: inherit; border-bottom-width: 0px;">
+				</div>
+			</div>
+			<div id="comp-m712rxvv" class="SsY_2i comp-m712rxvv" style="background: transparent; border: 0px; margin: 78px 0px 30px calc(50% - 490px); outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; position: relative; left: 576px; grid-area: 1 / 1 / 2 / 2; place-self: start; --lnw: 3px; --brd: 40,38,38; --mrg: 3px; --alpha-brd: 1; width: 3px; height: 890px;">
+				<div class="UGHfip wixui-vertical-line" style="background: transparent; border-image: url('') initial; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 890px; width: 3px; border-right-style: none; border-right-color: inherit; border-right-width: 0px; border-top-style: none; border-top-color: inherit; border-top-width: 0px; border-bottom-style: none; border-bottom-color: inherit; border-bottom-width: 0px;">
+				</div>
+			</div>
+			<div id="comp-m712sl8s" class="SsY_2i comp-m712sl8s" style="background: transparent; border: 0px; margin: 78px 0px 30px calc(50% - 490px); outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; position: relative; left: 662px; grid-area: 1 / 1 / 2 / 2; place-self: start; --lnw: 3px; --brd: 40,38,38; --mrg: 3px; --alpha-brd: 1; width: 3px; height: 890px;">
+				<div class="UGHfip wixui-vertical-line" style="background: transparent; border-image: url('') initial; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 890px; width: 3px; border-right-style: none; border-right-color: inherit; border-right-width: 0px; border-top-style: none; border-top-color: inherit; border-top-width: 0px; border-bottom-style: none; border-bottom-color: inherit; border-bottom-width: 0px;">
+				</div>
+			</div>
+			<div id="comp-m712t13m" class="SsY_2i comp-m712t13m" style="background: transparent; border: 0px; margin: 78px 0px 30px calc(50% - 490px); outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; position: relative; left: 756px; grid-area: 1 / 1 / 2 / 2; place-self: start; --lnw: 3px; --brd: 40,38,38; --mrg: 3px; --alpha-brd: 1; width: 3px; height: 890px;">
+				<div class="UGHfip wixui-vertical-line" style="background: transparent; border-image: url('') initial; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 890px; width: 3px; border-right-style: none; border-right-color: inherit; border-right-width: 0px; border-top-style: none; border-top-color: inherit; border-top-width: 0px; border-bottom-style: none; border-bottom-color: inherit; border-bottom-width: 0px;">
+				</div>
+			</div>
+			<div id="comp-m712tntb" class="SsY_2i comp-m712tntb" style="background: transparent; border: 0px; margin: 78px 0px 30px calc(50% - 490px); outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; position: relative; left: 829px; grid-area: 1 / 1 / 2 / 2; place-self: start; --lnw: 3px; --brd: 40,38,38; --mrg: 3px; --alpha-brd: 1; width: 3px; height: 890px;">
+				<div class="UGHfip wixui-vertical-line" style="background: transparent; border-image: url('') initial; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 890px; width: 3px; border-right-style: none; border-right-color: inherit; border-right-width: 0px; border-top-style: none; border-top-color: inherit; border-top-width: 0px; border-bottom-style: none; border-bottom-color: inherit; border-bottom-width: 0px;">
+				</div>
+			</div>
+			<div id="comp-m712tzo5" class="SsY_2i comp-m712tzo5" style="background: transparent; border: 0px; margin: 78px 0px 30px calc(50% - 490px); outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; position: relative; left: 906px; grid-area: 1 / 1 / 2 / 2; place-self: start; --lnw: 3px; --brd: 40,38,38; --mrg: 3px; --alpha-brd: 1; width: 3px; height: 890px;">
+				<div class="UGHfip wixui-vertical-line" style="background: transparent; border-image: url('') initial; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 890px; width: 3px; border-right-style: none; border-right-color: inherit; border-right-width: 0px; border-top-style: none; border-top-color: inherit; border-top-width: 0px; border-bottom-style: none; border-bottom-color: inherit; border-bottom-width: 0px;">
+				</div>
+			</div>
+			<div id="comp-m712uf90" class="SsY_2i comp-m712uf90" style="background: transparent; border: 0px; margin: 78px 0px 30px calc(50% - 490px); outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; position: relative; left: 980px; grid-area: 1 / 1 / 2 / 2; place-self: start; --lnw: 3px; --brd: 40,38,38; --mrg: 3px; --alpha-brd: 1; width: 3px; height: 890px;">
+				<div class="UGHfip wixui-vertical-line" style="background: transparent; border-image: url('') initial; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 890px; width: 3px; border-right-style: none; border-right-color: inherit; border-right-width: 0px; border-top-style: none; border-top-color: inherit; border-top-width: 0px; border-bottom-style: none; border-bottom-color: inherit; border-bottom-width: 0px;">
+				</div>
+			</div>
+			<div id="comp-m712upur" class="SsY_2i comp-m712upur" style="background: transparent; border: 0px; margin: 78px 0px 30px calc(50% - 490px); outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; position: relative; left: 1049px; grid-area: 1 / 1 / 2 / 2; place-self: start; --lnw: 3px; --brd: 40,38,38; --mrg: 3px; --alpha-brd: 1; width: 3px; height: 890px;">
+				<div class="UGHfip wixui-vertical-line" style="background: transparent; border-image: url('') initial; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 890px; width: 3px; border-right-style: none; border-right-color: inherit; border-right-width: 0px; border-top-style: none; border-top-color: inherit; border-top-width: 0px; border-bottom-style: none; border-bottom-color: inherit; border-bottom-width: 0px;">
+				</div>
+			</div>
+			<div id="comp-m712v0c1" class="SsY_2i comp-m712v0c1" style="background: transparent; border: 0px; margin: 83px 0px 25px calc(50% - 490px); outline: 0px; padding: 0px; vertical-align: baseline; pointer-events: auto; position: relative; left: 1101px; grid-area: 1 / 1 / 2 / 2; place-self: start; --lnw: 3px; --brd: 40,38,38; --mrg: 3px; --alpha-brd: 1; width: 3px; height: 890px;">
+				<div class="UGHfip wixui-vertical-line" style="background: transparent; border-image: url('') initial; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; height: 890px; width: 3px; border-right-style: none; border-right-color: inherit; border-right-width: 0px; border-top-style: none; border-top-color: inherit; border-top-width: 0px; border-bottom-style: none; border-bottom-color: inherit; border-bottom-width: 0px;">
+				</div>
+			</div>
+		</div>
+	</div>
+.</section>
+<p></p>
+		<div id="footer">
+		<p class="auto-style28" style="height: 132px">
+		<a href="HOME%20PAGE.html"><br />
+		Home</a> | 
+		<a href="PURPOSE.html">Purpose</a> 
+		| <a href="GUIDE.html">G<span class="auto-style29">uide</span></a> |
+		<a href="STAKE%20HOLDERS.html">
+		<span class="auto-style29">Stake holders</span></a>|
+		<a href="CANDIDATE%20RESULTS.html">R<span class="auto-style29">esults</span></a> |
+		<a href="E-LEARNING.html">E<span class="auto-style29">-learning</span></a> |
+		Suggestions |
+		<a href="file:///C:/Users/ATLAS/Documents/My%20Web%20Sites/mysite3/site_map/default.html">
+		<br />
+		<br />
+		</a>Copyright © 0000 ATLAS HIGH SCHOOL. All Rights Reserved<br />
+		<br />
+		Designed by Kalema Micheal, email: <a href="kalemamicheal076@gmail.com">
+		k<span class="auto-style29">alemamicheal076@gmail.com</span></a> contact: <a href="tel:0760700636"> 0760700636</a></p>
+		</div id="footer">
+    </body>

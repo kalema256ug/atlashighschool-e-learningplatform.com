@@ -1,0 +1,1241 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+ <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>E-LEARNING</title>
+<style type="text/css">
+.auto-style7 {
+	background-color: #008080;
+}
+.auto-style2 {
+	color: #00FF00;
+	text-align: center;
+	font-family: "Bodoni MT Black";
+	background-color: #137D7D;
+}
+.auto-style19 {
+	border-style: none;
+	border-width: medium;
+	text-align: center;
+}
+.auto-style22 {
+	color: #000080;
+	text-align: center;
+}
+
+    /* Animations and Transitions */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    .slide-up {
+      position: relative;
+      animation: slideUp 1.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    .zoom-in {
+      transform: scale(0.5);
+      animation: zoomIn 1s forwards;
+      opacity: 0;
+    }
+
+    .color-change {
+      transition: color 0.3s ease;
+    }
+
+    .color-change:hover {
+      color: #ff6347;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+/* Fade In/Out Transition */
+.fade {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade.show {
+  opacity: 1;
+}
+
+/* Scale (Zoom In/Out) Transition */
+.scale {
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.scale.show {
+  transform: scale(1);
+}
+
+/* Slide Up/Down Transition */
+.slide-up {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.slide-up.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-down {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.slide-down.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Color Change Transition */
+.color-change {
+  background-color: #3498db;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.color-change:hover {
+  background-color: #e74c3c;
+}
+
+/* Rotate Transition */
+.rotate {
+  transform: rotate(0deg);
+  transition: transform 1s ease-in-out;
+}
+
+.rotate:hover {
+  transform: rotate(360deg);
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in;
+}
+
+/* Slide In From Left Animation */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 1s ease-out;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Color Fade Animation */
+@keyframes colorFade {
+  0% {
+    background-color: #3498db;
+  }
+  50% {
+    background-color: #e74c3c;
+  }
+  100% {
+    background-color: #3498db;
+  }
+}
+
+.color-fade {
+  animation: colorFade 5s infinite;
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: rotate 2s infinite linear;
+}
+
+/* Hover Effects Combined with Transition */
+.hover-effect {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-effect:hover {
+  background-color: #e74c3c;
+  transform: scale(1.1);
+}
+
+@keyframes hover-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hover-effect:hover {
+  animation: hover-pulse 1s infinite;
+}
+
+/* Multiple Transitions Together */
+.multi-transition {
+  width: 200px;
+  height: 200px;
+  background-color: #3498db;
+  transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease;
+}
+
+.multi-transition:hover {
+  width: 250px;
+  height: 250px;
+  background-color: #e74c3c;
+}
+
+/* Fade In/Out Transition */
+.fade {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade.show {
+  opacity: 1;
+}
+
+/* Scale (Zoom In/Out) Transition */
+.scale {
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.scale.show {
+  transform: scale(1);
+}
+
+/* Slide Up/Down Transition */
+.slide-up {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.slide-up.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-down {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.slide-down.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Color Change Transition */
+.color-change {
+  background-color: #3498db;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.color-change:hover {
+  background-color: #e74c3c;
+}
+
+/* Rotate Transition */
+.rotate {
+  transform: rotate(0deg);
+  transition: transform 1s ease-in-out;
+}
+
+.rotate:hover {
+  transform: rotate(360deg);
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounce {
+  animation: bounce 1s 3-times;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in;
+}
+
+/* Slide In From Left Animation */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 1s ease-out;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Color Fade Animation */
+@keyframes colorFade {
+  0% {
+    background-color: #3498db;
+  }
+  50% {
+    background-color: #e74c3c;
+  }
+  100% {
+    background-color: #3498db;
+  }
+}
+
+.color-fade {
+  animation: colorFade 5s infinite;
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: rotate 2s infinite linear;
+}
+
+/* Hover Effects Combined with Transition */
+.hover-effect {
+  background-color: #179090;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-effect:hover {
+  background-color:#00FFFF;
+  transform: scale(1.1);
+}
+
+@keyframes hover-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hover-effect:hover {
+  animation: hover-pulse 1s infinite;
+}
+
+/* Multiple Transitions Together */
+.multi-transition {
+  width: 200px;
+  height: 200px;
+  background-color: #3498db;
+  transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease;
+}
+
+.multi-transition:hover {
+  width: 250px;
+  height: 250px;
+  background-color: #e74c3c;
+}
+
+
+.auto-style32 {
+	animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	text-align: center;
+}
+
+
+.auto-style33 {
+	text-align: center;
+	background-color: #DFF3F3;
+}
+
+
+.auto-style38 {
+	text-align: center;
+}
+
+
+.auto-style40 {
+	color: #000080;
+	text-align: center;
+	text-decoration: underline;
+}
+.auto-style41 {
+	color: #FFFFFF;
+}
+
+
+/* Styles for Footer */
+#footer p {
+	color: #fff;
+	font-size: medium;
+	margin-top: 2px;
+	margin-bottom: 6px;
+}
+#footer a {
+	color: #fff;
+	text-decoration: underline;
+}
+#footer a:hover {
+	color: #000;
+	text-decoration: none;
+
+ 
+}
+     .container {
+            padding: 0px;
+            border-radius: 0px;
+            text-align: center;
+            width:100%;
+           
+        }
+
+
+.auto-style39 {
+	font-size: x-small;
+	border-width: 0px;
+	background-color: #137D7D;
+	margin-top: 0px;
+	color: #FFFFFF;
+}
+
+    
+.auto-style42 {
+	text-align: center;
+	background-color: #7B9292;
+}
+
+    
+.auto-style48 {
+	background-color: #F0F8FF;
+}
+
+ 
+    .radio-group {
+            margin-bottom: 20px;
+        }
+
+        .radio-group label {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+.comments-list {
+            margin-top: 30px;
+        }
+
+
+/* Form Styling */
+#comment-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 60%;
+    font-family: Arial, sans-serif;
+   
+}
+
+h2 {
+    text-align: center;
+    color: #ff7043;
+    margin-bottom: 2px;
+     margin-top: 1px;
+
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 2px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+textarea.form-input {
+    resize: vertical;
+}
+
+.status-options {
+    display: flex;
+    gap: 5px;
+    margin-top: 1px;
+     margin-bottom: 10px;
+     
+
+}
+
+.status-options label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reset-btn,
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset-btn {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.submit-btn {
+    background-color: #ff7043;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #e64a19;
+}
+
+.reset-btn:hover {
+    background-color: #ccc;
+}
+
+
+/* Suggestion Form Styling */
+#suggestion-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 60%; /* Reduced width for smaller design */
+    font-family: Arial, sans-serif;
+}
+
+#suggestion-section h2 {
+    text-align: center;
+    color: #ff7043;
+    margin-bottom: 15px;
+}
+
+.suggestion-form .form-group {
+    margin-bottom: 12px;
+}
+
+.suggestion-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px; /* Smaller font size */
+}
+
+.suggestion-form .form-input {
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px; /* Reduced font size */
+}
+
+.suggestion-form textarea.form-input {
+    resize: vertical;
+    font-size: 14px; /* Consistent font size */
+}
+
+.suggestion-form .status-options {
+    display: flex;
+    gap: 12px; /* Reduced gap */
+    margin-top: 8px;
+}
+
+.suggestion-form .status-options label {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px; /* Reduced gap between radio buttons and text */
+    font-size: 10px;
+    
+}
+
+.suggestion-form .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.suggestion-form .reset-btn,
+.suggestion-form .submit-btn {
+    padding: 8px 16px;
+    font-size: 14px; /* Smaller font size for buttons */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.suggestion-form .reset-btn {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.suggestion-form .submit-btn {
+    background-color: #ff7043;
+    color: white;
+}
+
+.suggestion-form .submit-btn:hover {
+    background-color: #e64a19;
+}
+
+.suggestion-form .reset-btn:hover {
+    background-color: #ccc;
+}
+
+
+#container-2 {
+    padding: 30px;
+    
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    font-family: Arial, sans-serif;
+   
+}
+ 
+        }
+
+
+.auto-style49 {
+	text-align: left;
+}
+.auto-style50 {
+	text-align: left;
+	color: #000000;
+}
+.auto-style52 {
+	background-color: #FFFFCC;
+}
+
+
+.auto-style53 {
+	color: #000080;
+	text-decoration: underline;
+	font-size: x-large;
+	font-family: "Bernard MT Condensed";
+}
+.auto-style54 {
+	text-align: center;
+	background-color: #DBEEEE;
+}
+
+
+.auto-style55 {
+	color: #000080;
+	text-align: center;
+	text-decoration: underline;
+	background-color: #DBEEEE;
+}
+.auto-style56 {
+	font-size: x-large;
+}
+
+
+.auto-style57 {
+	color: #000080;
+	text-align: center;
+	text-decoration: underline;
+	background-color: #DBEEEE;
+	font-size: x-large;
+}
+
+     /* Styling the button */
+        #noticeButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* Styling the message */
+        #noticeMessage {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f8d7da;
+            color: #721c24;
+            border-radius: 5px;
+            border: 1px solid #f5c6cb;
+            display: none; /* Initially hidden */
+        }
+
+.auto-style58 {
+	font-size: x-small;
+}
+.auto-style59 {
+	font-size: small;
+}
+.auto-style60 {
+	display: flex;
+	gap: 5px;
+	margin-top: 1px;
+	margin-bottom: 10px;
+	width: 50%;
+	font-size: small;
+}
+
+.auto-style61 {
+	font-size: large;
+}
+.auto-style62 {
+	text-align: center;
+	background-color: #EED594;
+}
+.auto-style63 {
+	background-color: #9CE1E1;
+}
+
+.auto-style67 {
+	animation-name: bounce;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: 3-times;
+	text-align: center;
+	color: #FF920D;
+}
+
+.auto-style68 {
+	color: #E74C3C;
+	background-color: #FFFFFF;
+}
+.auto-style69 {
+	background-color: #FFFFFF;
+}
+
+</style>
+ <base target="form" />
+</head>
+
+<body 
+ style="margin: 0; background-color:#f0f8ff;"
+ >
+
+		<table style="width: 100%; height: 133px" class="auto-style7">
+			<tr>
+				<td style="width: 81px">
+				<img alt="" height="73" src="logo.png" width="95" /></td>
+				<td>
+<h1 class="auto-style2">ATLAS HIGH SCHOOL E-LEARNING </h1>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="height: 26px">
+		<table align="center" class="auto-style39" style="width: 100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="auto-style19" style="width: 16%">
+				<a href="HOME%20PAGE.html"><span class="hover-effect" class="auto-style20">HOME 
+				</span></a></td>
+				<td class="auto-style19" style="width: 16%">
+				<a href="PURPOSE.html"><span  class="hover-effect" class="auto-style20">PURPOSE</span></a></td>
+				<td class="auto-style19" style="width: 20%"><a href="STAKE%20HOLDERS.html">
+				<span  class="hover-effect" class="auto-style20">STAKE 
+				HOLDERS</span></a></td>
+				<td class="auto-style19" style="width: 16%">
+				<a href="CANDIDATE%20RESULTS.html">
+				<span  class="hover-effect" class="auto-style20">&nbsp;RESULTS</span></a></td>
+				<td class="auto-style19" style="width: 16%">
+				<a href="E-LEARNING.html"><span class="hover-effect" class="auto-style27">E-LEARNING</span></a></td>
+			</tr>
+		</table></td>
+			</tr>
+			<tr>
+				<td style="height: 25px"  class="auto-style68">
+				updates</td>
+			
+				<td style="height: 25px"  class="auto-style69">
+				<marquee>Holiday is about, we are going to add holiday work endavor to 
+				check.</marquee></td>
+			
+			</tr>
+		</table>
+<h1 class="auto-style22">ATLAS HIGH SCHOOL&nbsp; E-LEARNING PLATFORM</h1>
+<p class="auto-style67"> <strong>E-LEARNING PLATFORM</strong></p>
+<p class="auto-style22">
+<img class="zoom-in" style="animation-delay: 0.3s;" alt="" height="168" src="images%20(2).jfif" width="300" />&nbsp;</p>
+<p class="auto-style32" class="auto-style33">For Holiday activities click below</p>
+<p class="auto-style33"><span class="hover-effect"><a href="HOLIDAY.html">
+<span class="auto-style41">Holiday activies</span></a></span></p>
+<p> <div class="anthem-container">
+        <h1 class="auto-style40">E-LEARNING</h1>
+        <div class="auto-style38" id="lyrics"></div>
+    </div>
+
+    <script>
+        const anthemLyrics = `
+        This platform was built to enable learners
+        to learn from anywhere online. 
+        Have access to reference work, pictures and sample activies
+       hence acquiring more knowledge and skills.
+        `;
+
+        let index = 0;
+        const speed = 100; // typing speed in milliseconds
+        const lyricsElement = document.getElementById('lyrics');
+
+        function typeLyrics() {
+            if (index < anthemLyrics.length) {
+                lyricsElement.textContent += anthemLyrics.charAt(index);
+                index++;
+                setTimeout(typeLyrics, speed);
+            }
+        }
+
+        typeLyrics();
+    </script>
+<p class="auto-style38">
+</p>
+<body>
+<p class="auto-style38">For&nbsp; E-Learning click the subject of your choice 
+and learn.</p>
+<p class="auto-style32" class="auto-style31"> 
+<span>Click 
+on the subject of your choice.</span><br> 
+</p>
+<p></p>
+<p class="auto-style38"><button id="noticeButton">help</button></p>
+
+    <div id="noticeMessage">
+        <p>Keep on scrolling and clicking .Every thing easy. 
+        for any issue call for help from any one experienced.
+For learning online on this platform, click on e-learning and click on any subject of your choice.
+O-level work and sample questions will appear first and past UNEB and for A level click A-level up.
+ 
+Keep scrolling as you can read through the work, sample questions and sample activities.
+U can even download and save or even print out to read offline. 
+To view work, simply click on the book title. 
+To download simply open the work and in the up, right corner click on the arrow facing down to download.
+</p>
+    </div>
+
+    <script>
+        // Get the button and the message
+        var button = document.getElementById("noticeButton");
+        var notice = document.getElementById("noticeMessage");
+
+        // Add event listener to the button
+        button.addEventListener("click", function() {
+            // Toggle the visibility of the notice message
+            if (notice.style.display === "none") {
+                notice.style.display = "block";
+            } else {
+                notice.style.display = "none";
+            }
+        });
+    </script>
+<div id="container-2" style="height: 439px" class="auto-style52">
+	<p class="auto-style54" style="height: 29px">
+</section>
+	<span class="auto-style53"><strong>SUBJECTS</strong></span><br />
+	<table cellpadding="5" cellspacing="5" style="width: 100%; height: 316px" class="auto-style52">
+		<tr>
+			<td class="auto-style49">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="biology_course_selection.html">&nbsp;BIOLOGY</a></td>
+			<td><a href="ICT%20Course%20Selection.html">COMPUTER</a></td>
+		</tr>
+		<tr>
+			<td class="auto-style49">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<a href="CHE%20Course%20Selection.html">CHEMISTRY</a></td>
+			<td><a href="ART%20Course%20Selection.html">ART</a></td>
+		</tr>
+		<tr>
+			<td class="auto-style49">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<a href="phy%20Course%20Selection.html">PHYSICS</a></td>
+			<td><a href="LIT%20Course%20Selection.html">LITERATURE</a></td>
+		</tr>
+		<tr>
+			<td class="auto-style49">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="geo%20Course%20Selection.html">GEOGRAPHY</a></td>
+			<td><a href="LUGANDA%20Course%20Selection.html">LUGANDA</a></td>
+		</tr>
+		<tr>
+			<td class="auto-style49">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<a href="HIST%20Course%20Selection.html">HISTORY</a></td>
+			<td><a href="kisw%20Course%20Selection.html">KISWAHILI</a></td>
+		</tr>
+		<tr>
+			<td class="auto-style49">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+			<a href="MTC%20Course%20Selection.html">MATHMATICS</a></td>
+		<td class="auto-style50" style="width: 195px">
+		<a href="PE%20Course%20Selection.html">PHYSICAL EDUCATION</a></td>
+		</tr>
+		<tr>
+			<td class="auto-style49">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<a href="ENG%20%20Course%20Selection.html">ENGLISH</a></td>
+			<td><a href="ENT%20Course%20Selection.html">ENTREPRENUERSHIP</a></td>
+		</tr>
+		<tr>
+			<td class="auto-style49">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<a href="IRE%20Course%20Selection.html">IRE</a> </td>
+			<td><a href="MUSIC%20Course%20Selection.html">MUSIC</a></td>
+		</tr>
+		<tr>
+			<td class="auto-style49">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<a href="CRE%20Course%20Selection.html">CRE</a></td>
+			<td><a href="GP%20Course%20Selection.html">GENERAL PAPER</a></td>
+		</tr>
+		<tr>
+			<td class="auto-style49">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="AGR%20Course%20Selection.html">AGRICULTURE</a></td>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+	</p>
+</div>
+<p class="auto-style62">	
+
+	
+<span class="auto-style61">submit more more work and activities here</span><br />
+<span class="auto-style61"><span class="auto-style63"><a href="submit.html">
+submit here</a></span></span><p class="auto-style62">	
+
+	
+<span class="auto-style61">Chat with us </span><br />
+<span class="auto-style63"><span class="auto-style61">
+<a href="chat%20with%20us.html">here</a></span></span><p>	
+
+	
+&nbsp;<p>	
+
+	
+&nbsp;<p class="auto-style55"><span class="auto-style56"><strong>CHAT WITH US OR</strong></span>
+<span class="auto-style56"><strong>MAKE YOUR SUGGESTIONS</strong></span></p>
+<p class="auto-style38">Chat or make your suggestions here such that we make 
+adjustments for u.</p>
+<form
+  method="post" action="--WEBBOT-SELF--" class="auto-style48">
+  
+
+       
+
+	<section id="suggestion-section">
+    <h2>Message or make Suggestion here</h2>
+    <form method="post" action="--WEBBOT-SELF--" class="suggestion-form">
+        <!--webbot B-Email-Label-Fields="TRUE" bot="SaveResults" S-Builtin-Fields="REMOTE_NAME REMOTE_USER HTTP_USER_AGENT Date Time" S-Date-Format="%A, %d %B %Y" S-Email-Address="kalemamike076@gmail.com" S-Email-Format="TEXT/PRE" S-Time-Format="%H:%M:%S" -->
+        <div class="form-group">
+            <label for="sir-name-suggestion">Name</label>
+            <input type="text" id="name-suggestion" name="name" placeholder="Name" class="form-input">
+           
+        </div>
+
+        <div class="form-group">
+            <label>Status</label>
+            <div class="status-options">
+                <label>
+                    <input type="radio" name="status" value="student"> 
+                </label>
+                <span class="auto-style58">
+                <label class="auto-style59">
+				Student
+                </label>
+                </span>
+                <label>
+                    <input type="radio" name="status" value="teacher" class="auto-style59"></label><span class="auto-style58"><label class="auto-style59"> Teacher
+                </label>
+                </span>
+                <label>
+                    <input type="radio" name="status" value="administrator" class="auto-style59"></label><span class="auto-style58"><label class="auto-style59"> Administrator
+                </label>
+                </span>
+                <label>
+                    <input type="radio" name="status" value="other" class="auto-style59"></label><span class="auto-style58"><label class="auto-style59"> other
+                </label>
+
+            	</span>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="contact">Contact Number</label>
+            <input type="text" id="contact" name="contact" value="+256" class="form-input">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="@gmail.com" class="form-input">
+        </div>
+
+        <div class="form-group">
+            <label for="about">About</label>
+            <select name="about" id="about" class="form-input">
+                <option value="website">Website</option>
+                <option value="E-Learning">E-Learning</option>
+                <option value="academic-content">Academic Content</option>
+                <option value="other-issues">Other Issues</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="suggestion">Message or Suggestion</label>
+            <textarea name="suggestion" id="suggestion" rows="5" placeholder="massege or your suggestion..." class="form-input"></textarea>
+        </div>
+
+        <div class="form-actions">
+            <button type="reset" class="reset-btn">Reset</button>
+            <button type="submit" class="submit-btn">Send </button>
+        </div>
+    </form>
+</section>
+<p class="auto-style57">Leave a comment</p>
+<p class="auto-style38">leave a comment here about anything in the platform</p>
+	
+	<section id="comment-section">
+    <h2>Leave a Comment</h2>
+    <form method="post" action="submit_comment.php" class="comment-form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Name" class="form-input">
+           
+        </div>
+
+        <div class="form-group">
+            <label>Status</label>
+            <div class="auto-style60">
+                <label>
+                    <input type="radio" name="status" value="student"> Student
+                    <input type="radio" name="status" value="teacher" class="auto-style59"> Teacher
+                    <input type="radio" name="status" value="administrator" class="auto-style59"> Administrator
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="about">About</label>
+            <select name="about" id="about" class="form-input">
+                <option value="website">Website</option>
+                <option value="E-Learning">E-Learning</option>
+                <option value="academic-content">Academic Content</option>
+                <option value="other-issues">Other Issues</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="comment">Comment</label>
+            <textarea name="comment" id="comment" rows="5" placeholder="Your comment..." class="form-input"></textarea>
+        </div>
+
+        <div class="form-actions">
+            <button type="reset" class="reset-btn">Reset</button>
+            <button type="submit" class="submit-btn">Post Comment</button>
+        </div>
+    </form>
+</section>
+
+  <!-- Comments List -->
+        <div class="comments-list" id="commentsList">
+            <!-- Dynamically loaded comments will appear here -->
+        </div>
+
+<p class="auto-style33">.</p>
+<div id="footer">
+		<p class="auto-style42" style="height: 128px">
+		<a href="HOME%20PAGE.html"><br />
+		Home</a> | 
+		<a href="PURPOSE.html">Purpose</a> 
+		| <a href="GUIDE.html">Guide</a> |
+		<a href="STAKE%20HOLDERS.html">
+		Stake holders</a>|
+		<a href="CANDIDATE%20RESULTS.html">Results</a> |
+		<a href="chat%20with%20us.html">chat with us</a> |
+		<a href="kalemamicheal076@gmail.com">
+		send feedback</a> 
+		|<br>
+		</br>
+		<a>Copyright © ATLAS HIGH SCHOOL. All Rights Reserved</a>
+		<br />
+		<br />
+		Designed by Kalema Micheal, email: <a href="kalemamicheal076@gmail.com">
+		kalemamicheal076@gmail.com</a> contact: <a href="tel:0760700636"> 0760700636</a></p>
+</div>
+
+
+
+
+
+</body>
+
+</html>

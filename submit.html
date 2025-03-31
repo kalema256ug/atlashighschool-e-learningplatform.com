@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>submit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color:#E9F3F3;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width:80%;
+            length 50%
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+        /* Hover Effects Combined with Transition */
+.hover-effect3 {
+  background-color:#f0f8ff;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-effect3:hover {
+  background-color:#f0f8ff;
+  transform: scale(1.2);
+}
+
+    .auto-style4 {
+		background-color: #FF7043;
+	}
+
+    .auto-style5 {
+		background-color: #FFFFFF;
+		padding: 5px;
+		border-radius: 5px;
+	}
+
+    #comment-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 60%;
+    font-family: Arial, sans-serif;
+   
+}
+
+h2 {
+    text-align: center;
+    color: #ff7043;
+    margin-bottom: 2px;
+     margin-top: 1px;
+
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 2px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.auto-style60 {
+	display: flex;
+	gap: 5px;
+	margin-top: 1px;
+	margin-bottom: 10px;
+	width: 50%;
+	font-size: small;
+}
+
+.auto-style59 {
+	font-size: small;
+}
+
+textarea.form-input {
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reset-btn {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.reset-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+    background-color: #ff7043;
+    color: white;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+	.auto-style61 {
+		margin-top: 0px;
+	}
+/* Form Styling */
+#submit-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    font-family: Arial, sans-serif;
+   
+}
+
+h2 {
+    text-align: center;
+    color: #ff7043;
+    margin-bottom: 2px;
+     margin-top: 1px;
+
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 2px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+submit.form-input {
+    height:20px;
+}
+
+.status-options {
+    display: flex;
+    gap: 5px;
+    margin-top: 1px;
+     margin-bottom: 10px;
+     
+
+}
+
+.status-options label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reset-btn,
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset-btn {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.submit-btn {
+    background-color: #ff7043;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #e64a19;
+}
+
+.reset-btn:hover {
+    background-color: #ccc;
+}
+
+
+
+    .auto-style62 {
+		width: 100%;
+		font-size: 1rem;
+		border: 1px solid #ccc;
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 2px;
+		padding: 10px;
+		border-radius: 5px;
+	}
+
+
+
+    .auto-style63 {
+		text-decoration: underline;
+		color: #000080;
+	}
+
+
+
+    </style>
+</head>
+<body style="background-color: #D4FFFF">
+
+    <div class="container">
+    <logo></logo>
+        <h1 class="auto-style63">SUBMITTION PANNEL</h1>
+		<p class="auto-style4"><a href="E-LEARNING.html">
+		<span class="auto-style5"> BACK TO E-LEARNING</span></a></p>
+	
+		
+	
+		<section id="submit-section">
+    <h2>sumbmit work to be added</h2>
+    <form method="post" action="--WEBBOT-SELF--" class="comment-form">
+        <!--webbot B-Email-Label-Fields="TRUE" bot="FileUpload" S-Builtin-Fields="REMOTE_NAME REMOTE_USER HTTP_USER_AGENT Date Time" S-Date-Format="%A, %d %B %Y" S-Email-Address="kalemamike076@gmail.com" S-Email-Format="TEXT/PRE" S-Time-Format="%H:%M:%S" -->
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Name" class="form-input">
+           
+        </div>
+
+        <div class="form-group">
+            <label>Status</label>
+            <div class="auto-style60">
+                <label>
+                    <input type="radio" name="status" value="student"> Student
+                    <input type="radio" name="status" value="teacher" class="auto-style59"> Teacher
+                    <input type="radio" name="status" value="administrator" class="auto-style59"> Administrator
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="about">subject</label>
+            <select name="about" id="about" class="auto-style62">
+                <option value="biology">biology</option>
+				<option value="chemistry">chemistry</option>
+				<option value="math">math</option>
+				<option>geography</option>
+				<option value="history">history</option>
+            	<option value="physics">physics</option>
+				<option value="english">english</option>
+				<option value="agriculture">agriculture</option>
+				<option>ict</option>
+				<option value="kiswahili">kiswahili</option>
+				<option value="art">art</option>
+				<option value="entreprenuership">entreprenuership</option>
+				<option value="music">music</option>
+				<option value="economics">economics</option>
+				<option value="P.E">P.E</option>
+            </select>
+        </div>
+
+        <div id="submit-section" class="form-group" style="height: 91px">
+            <label for="comment">Choose files</label>
+            <br>
+			<input class="auto-style61" name="File1" style="width: 271px; height: 42px" type="file">
+        </div>
+          <div class="form-group">
+              Add description here
+            <textarea name="description" id="comment" rows="2" placeholder="description..." class="form-input"></textarea>
+        </div>
+
+
+        <div class="form-actions">
+            <button type="reset" class="reset-btn">Reset</button>
+            <button type="submit" class="submit-btn">submit</button>
+        </div>
+    </form>
+		</section>
+
+		<br>
+    </div>
+
+    <script>
+        function selectCourse(course) {
+            alert("You have selected: " + course);
+        }
+    </script>
+
+</body>
+</html>
